@@ -1,16 +1,7 @@
 import { ChangeEvent, FormEvent, useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, push, set } from "firebase/database";
-const firebaseConfig = {
-  apiKey: "AIzaSyBlZklOScrPbAcNswl2yvVXslEXuYFBR8I",
-  authDomain: "corsfb.firebaseapp.com",
-  databaseURL: "https://corsfb-default-rtdb.firebaseio.com",
-  projectId: "corsfb",
-  storageBucket: "corsfb.appspot.com",
-  messagingSenderId: "871173169737",
-  appId: "1:871173169737:web:3fff8833672b76865b1598",
-};
-const app = initializeApp(firebaseConfig);
+import { app } from "./config";
 interface Form {
   name: string;
   email: string;
